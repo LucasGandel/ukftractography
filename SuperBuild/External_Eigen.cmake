@@ -57,8 +57,8 @@ if(NOT ( DEFINED "USE_SYSTEM_${extProjName}" AND "${USE_SYSTEM_${extProjName}}" 
     DEPENDS
       ${${proj}_DEPENDENCIES}
   )
-  set(${extProjName}_DIR ${CMAKE_BINARY_DIR}/${proj}-install)
-  set(${extProjName}_INCLUDE_DIR ${CMAKE_BINARY_DIR}/${proj}-install/include/eigen3)
+  set(${extProjName}_DIR ${CMAKE_CURRENT_BINARY_DIR}/${proj}-install)
+  set(${extProjName}_INCLUDE_DIR ${CMAKE_CURRENT_BINARY_DIR}/${proj}-install/include/eigen3)
 else()
   if(${USE_SYSTEM_${extProjName}})
     find_package(${extProjName} ${${extProjName}_REQUIRED_VERSION} REQUIRED)
